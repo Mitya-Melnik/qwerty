@@ -1,6 +1,6 @@
 //
 //  AppDelegate.h
-//  browser
+//  Browser
 //
 //  Created by Admin on 26/03/2013.
 //  Copyright (c) 2013 Admin. All rights reserved.

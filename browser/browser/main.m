@@ -1,9 +1,9 @@
 //
 //  main.m
-//  browser
+//  Prototype
 //
-//  Created by Admin on 26/03/2013.
-//  Copyright (c) 2013 Admin. All rights reserved.
+//  Created by Петрова Варвара on 28.03.13.
+//  Copyright (c) 2013 Петрова Варвара. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
