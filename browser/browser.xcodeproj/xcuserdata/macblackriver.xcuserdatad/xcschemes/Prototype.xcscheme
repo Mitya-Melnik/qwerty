@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE7541461701F3C7007E8B8A"
-               BuildableName = "browser.app"
-               BlueprintName = "browser"
-               ReferencedContainer = "container:browser.xcodeproj">
+               BlueprintIdentifier = "B31FA8CC1704D6FB007CA557"
+               BuildableName = "Prototype.app"
+               BlueprintName = "Prototype"
+               ReferencedContainer = "container:Prototype.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE7541461701F3C7007E8B8A"
-            BuildableName = "browser.app"
-            BlueprintName = "browser"
-            ReferencedContainer = "container:browser.xcodeproj">
+            BlueprintIdentifier = "B31FA8CC1704D6FB007CA557"
+            BuildableName = "Prototype.app"
+            BlueprintName = "Prototype"
+            ReferencedContainer = "container:Prototype.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE7541461701F3C7007E8B8A"
-            BuildableName = "browser.app"
-            BlueprintName = "browser"
-            ReferencedContainer = "container:browser.xcodeproj">
+            BlueprintIdentifier = "B31FA8CC1704D6FB007CA557"
+            BuildableName = "Prototype.app"
+            BlueprintName = "Prototype"
+            ReferencedContainer = "container:Prototype.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE7541461701F3C7007E8B8A"
-            BuildableName = "browser.app"
-            BlueprintName = "browser"
-            ReferencedContainer = "container:browser.xcodeproj">
+            BlueprintIdentifier = "B31FA8CC1704D6FB007CA557"
+            BuildableName = "Prototype.app"
+            BlueprintName = "Prototype"
+            ReferencedContainer = "container:Prototype.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
