@@ -19,6 +19,7 @@
 		B31FA8EA1704D6FB007CA557 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FA8E91704D6FB007CA557 /* ViewController.m */; };
 		B31FA8ED1704D6FB007CA557 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B31FA8EB1704D6FB007CA557 /* ViewController_iPhone.xib */; };
 		B31FA8F01704D6FB007CA557 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B31FA8EE1704D6FB007CA557 /* ViewController_iPad.xib */; };
+		B331B23617253ABA005153AF /* Context.m in Sources */ = {isa = PBXBuildFile; fileRef = B331B23517253ABA005153AF /* Context.m */; };
 		B3AAF2CD1716F83400B52347 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AAF2CC1716F83400B52347 /* libsqlite3.0.dylib */; };
 		B3AAF2D3171700D000B52347 /* Records.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AAF2D2171700D000B52347 /* Records.m */; };
 		B3B8183A171C1BCF000131AA /* records.sql in Resources */ = {isa = PBXBuildFile; fileRef = B3B81839171C1BCF000131AA /* records.sql */; };
@@ -42,6 +43,8 @@
 		B31FA8E91704D6FB007CA557 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B31FA8EC1704D6FB007CA557 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		B31FA8EF1704D6FB007CA557 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		B331B23417253ABA005153AF /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Context.h; sourceTree = "<group>"; };
+		B331B23517253ABA005153AF /* Context.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Context.m; sourceTree = "<group>"; };
 		B3AAF2CC1716F83400B52347 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		B3AAF2D1171700D000B52347 /* Records.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Records.h; sourceTree = "<group>"; };
 		B3AAF2D2171700D000B52347 /* Records.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Records.m; sourceTree = "<group>"; };
@@ -104,6 +107,8 @@
 				B31FA8EB1704D6FB007CA557 /* ViewController_iPhone.xib */,
 				B31FA8EE1704D6FB007CA557 /* ViewController_iPad.xib */,
 				B31FA8D71704D6FB007CA557 /* Supporting Files */,
+				B331B23417253ABA005153AF /* Context.h */,
+				B331B23517253ABA005153AF /* Context.m */,
 			);
 			path = Prototype;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 				B31FA8E11704D6FB007CA557 /* AppDelegate.m in Sources */,
 				B31FA8EA1704D6FB007CA557 /* ViewController.m in Sources */,
 				B3AAF2D3171700D000B52347 /* Records.m in Sources */,
+				B331B23617253ABA005153AF /* Context.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

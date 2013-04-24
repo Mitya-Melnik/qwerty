@@ -14,7 +14,6 @@
 
 - (void)dealloc
 {
-    [records release];
     [_window release];
     [_viewController release];
     [super dealloc];
@@ -24,7 +23,6 @@
 {
     //БД
     [self createEditableCopyOfDatabaseIfNeeded];
-    [self initializeDatabase];
     //------------
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
@@ -63,10 +61,10 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     //Закрытие БД
-    [Records finalizeStatements];
-    if (sqlite3_close(database) != SQLITE_OK) {
-        NSAssert1(0, @"Error: failed to close database with message '%s'.", sqlite3_errmsg(database));
-    }
+ //   [Records finalizeStatements];
+   // if (sqlite3_close(database) != SQLITE_OK) {
+     //   NSAssert1(0, @"Error: failed to close database with message '%s'.", sqlite3_errmsg(database));
+    //}
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
@@ -90,40 +88,5 @@
     }
 }
 
--(void)initializeDatabase {
-    // Создание массива записей
-    NSMutableArray *recordsArray = [[NSMutableArray alloc] init];
-    self->records = recordsArray;
-    [recordsArray release];
-    
-    // Получаем путь к базе данных
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *path = [documentsDirectory stringByAppendingPathComponent:@"records.sql"];
-    
-    // Открываем базу данных
-    if (sqlite3_open([path UTF8String], &database) == SQLITE_OK) {
-        // Запрашиваем список идентификаторов записей
-        const char *sql = "SELECT id FROM records ORDER BY id ASC";
-        sqlite3_stmt *statement;
-        
-        // Компилируем запрос в байткод перед отправкой в базу данных
-        if (sqlite3_prepare_v2(database, sql, -1, &statement, NULL) == SQLITE_OK) {
-            while (sqlite3_step(statement) == SQLITE_ROW) {
-                int primaryKey = sqlite3_column_int(statement, 0);
-                
-                Records *record = [[Records alloc] initWithIdentifier:primaryKey database:database];
-                [records addObject:record];
-                [record release];
-            }
-        }
-        
-        sqlite3_finalize(statement);
-    } else {
-        // Даже в случае ошибки открытия базы закрываем ее для корректного освобождения памяти
-        sqlite3_close(database);
-        NSAssert1(NO, @"Failed to open database with message '%s'.", sqlite3_errmsg(database));
-    }
-}
 
 @end

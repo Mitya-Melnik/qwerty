@@ -12,9 +12,6 @@
 @class ViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>{
-    
-    sqlite3 *database;// дескриптор базы, полученной при открытии
-    NSMutableArray *records;//записи из базы
 }
 
 @property (strong, nonatomic) UIWindow *window;
@@ -23,6 +20,4 @@
 
 
 -(void)createEditableCopyOfDatabaseIfNeeded;//bundle->documents
--(void)initializeDatabase;//открытие бд и инициализация начальных значений
-
 @end

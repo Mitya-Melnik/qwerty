@@ -8,23 +8,24 @@
 
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
+
+static sqlite3_stmt *init_statement;
+static sqlite3_stmt *read_statement;
+static sqlite3_stmt *update_statement;
+static sqlite3_stmt *insert_statement;
+
 @interface Records : NSObject{
-    sqlite3 *database;
-    NSInteger primaryKey;
+    NSInteger userID;
     NSString *url;
-    NSString *user;
+    NSInteger primaryKey;
+   
   
 }
-@property (assign, nonatomic, readonly) NSInteger primaryKey;//readonly
+@property (assign, nonatomic) NSInteger userID;
 @property (copy, nonatomic) NSString *url;
-@property (copy, nonatomic) NSString *user;
-
-+(void)finalizeStatements;
+@property (assign,nonatomic) NSInteger primaryKey;
 
 -(id)initWithIdentifier:(NSInteger)idKey database:(sqlite3 *)db;
--(void)readRecord;
--(void)updateRecord;
--(void)insertIntoDatabase:(sqlite3 *)db;
--(void)deleteRecord;
+
 @end
 

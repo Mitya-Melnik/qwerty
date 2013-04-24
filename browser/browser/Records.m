@@ -9,27 +9,26 @@
 #import "Records.h"
 
 @implementation Records
-#define USER_LENGTH 50
+//#define USER_LENGTH 50
 @synthesize url;
-@synthesize user;
+//@synthesize user;
 @synthesize primaryKey;
+@synthesize userID;
 
-static sqlite3_stmt *init_statement = nil;
-static int read_statement;
-static sqlite3_stmt *update_statement;
-static sqlite3_stmt *insert_statement;
+
+ 
 
 -(id)initWithIdentifier:(NSInteger)idKey database:(sqlite3 *)db {
     if (self = [super init]) {
-        database = db;
+        //database = db;
         primaryKey = idKey;
         
         // Инициализуем переменную init_statement при первом вызоме метода
         if (init_statement == nil) {
             // Подготавливаем запрос перед отправкой в базу данных
             const char *sql = "SELECT user FROM records WHERE id=?";
-            if (sqlite3_prepare_v2(database, sql, -1, &init_statement, NULL) != SQLITE_OK) {
-                NSAssert1(NO, @"Error: failed to prepare statement with message '%s'.", sqlite3_errmsg(database));
+            if (sqlite3_prepare_v2(db, sql, -1, &init_statement, NULL) != SQLITE_OK) {
+                NSAssert1(NO, @"Error: failed to prepare statement with message '%s'.", sqlite3_errmsg(db));
             }
         }
         
@@ -49,7 +48,8 @@ static sqlite3_stmt *insert_statement;
     return self;
 }
 
-// Метод класса
+
+/*// Метод класса
 +(void)finalizeStatements {
         if (init_statement) sqlite3_finalize(init_statement);
         if (read_statement) sqlite3_finalize(read_statement);
@@ -131,6 +131,6 @@ static sqlite3_stmt *insert_statement;
     
     self.url = nil;
 }
-
+*/
 
 @end
